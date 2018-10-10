@@ -2,9 +2,9 @@
 
 ## Table of Contents
 
-1. [Challenge: Reverse an array] (Challenges/reverseArray)
+1. Challenge: Reverse an array - This challenge is N/A
 
-2. [Challenge: Insert and shift an array]()
+2. [Challenge: Insert and shift an array](Challenges/arrayShift)
 
 3. [Challenge: ]()
 
