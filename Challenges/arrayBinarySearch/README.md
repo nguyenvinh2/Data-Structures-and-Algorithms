@@ -2,17 +2,22 @@
 
 ## Challenge
 
-Given an array of N Size and an input number, the input number should be inserted into the middle of the array, thus increase the size of the array to N+1. If the array is an odd size, the input number should be on the right middle side of the array.
+Given a sorted array of N Size and an input number, find the location of the input number in the array and return its index position. If not found, the output will return -1.
 
 e.g.
 
-With array [2,4,6,8] and input 5, the output should be	[2,4,5,6,8]
+With array [2,4,5,8] and input 4, the output should be 1
 
-With array [4,8,15,23,42] and input 16, the output should be	[4,8,15,16,23,42]
+With array [4,8,15,23,42] and input 42, the output should be 4
+
+With array [4,8,15,23,42] and input 76, the output should be -1
 
 ## Approach and Reasoning
 
-Assumptions: An array of zero length will simply output an array of 1 length with the input number occupying it:
+Assumptions: The array must be sorted from lowest values to highest. It will not work otherwise. 
+e.g.
+
+[3,5,3,3,3] is not guaranteed to return a correct index. 
 
 {} + N => {N}
 

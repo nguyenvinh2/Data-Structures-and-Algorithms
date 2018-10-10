@@ -17,7 +17,7 @@ namespace arrayBinarySearchXUnitTest
     [Fact]
     public void RandomHighValueArrayTest()
     {
-      Assert.Equal(4, BinarySearch(new int[] {1,2,3,4,5}, 5));
+      Assert.Equal(4, BinarySearch(new int[] {1,2,2,2,5}, 5));
     }
     //test for search on the left half of the array
     [Fact]
