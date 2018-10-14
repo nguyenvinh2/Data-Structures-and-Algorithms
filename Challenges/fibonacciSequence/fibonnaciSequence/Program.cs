@@ -7,9 +7,11 @@ namespace fibonnaciSequence
     public static void Main(string[] args)
     {
       Console.WriteLine("Hello World!");
-      uint input = 45;
+      uint input = 25;
       Console.WriteLine(input);
       Console.WriteLine(Fibonacci(input));
+      Console.WriteLine(FibonacciConstant(input));
+      Console.WriteLine(FibonacciRecursive(input));
       Console.ReadKey();
     }
 
@@ -41,7 +43,26 @@ namespace fibonnaciSequence
         Console.WriteLine(e.Message);
         throw;
       }
+    }
 
+    public static uint FibonacciConstant(uint input)
+    {
+      double phi = (Math.Sqrt(5) + 1) / 2;
+      uint fibonacci = (uint)((Math.Pow(phi, input) - Math.Pow(-phi, -input)) / Math.Sqrt(5)); ;
+      return fibonacci;
+    }
+
+    public static uint FibonacciRecursive(uint input)
+    {
+      if (input == 0)
+      {
+        return 0;
+      }
+      if (input == 1)
+      {
+        return 1;
+      }
+      return FibonacciRecursive(input - 1) + FibonacciRecursive(input - 2);
     }
   }
 }
