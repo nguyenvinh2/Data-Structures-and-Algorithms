@@ -27,4 +27,4 @@ Space efficiency - Big O with be O(1) the variables used will remain constant.
 Stored in Program.cs
 Output wil be:
 
-![Console](../../assets/fibonnaci.PNG?raw=true "Output")
+![Console](../../assets/fibonacci.PNG?raw=true "Output")
