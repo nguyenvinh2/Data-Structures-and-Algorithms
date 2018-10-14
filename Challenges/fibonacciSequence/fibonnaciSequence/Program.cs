@@ -7,32 +7,41 @@ namespace fibonnaciSequence
     public static void Main(string[] args)
     {
       Console.WriteLine("Hello World!");
-      int input = 45;
+      uint input = 45;
       Console.WriteLine(input);
       Console.WriteLine(Fibonacci(input));
       Console.ReadKey();
     }
 
-    public static int Fibonacci(int input)
+    public static uint Fibonacci(uint input)
     {
-      int fibonnaci = 1;
-      int priorValue = 1;
-      int placeholder;
-      if (input == 0)
+      try
       {
-        return 0;
+        uint fibonnaci = 1;
+        uint priorValue = 1;
+        uint placeholder;
+        if (input == 0)
+        {
+          return 0;
+        }
+        if (input == 1)
+        {
+          return 1;
+        }
+        for (int i = 2; i < input; i++)
+        {
+          placeholder = fibonnaci;
+          fibonnaci += priorValue;
+          priorValue = placeholder;
+        }
+        return fibonnaci;
       }
-      if (input == 1)
+      catch (Exception e)
       {
-        return 1;
+        Console.WriteLine(e.Message);
+        throw;
       }
-      for (int i = 2; i < input; i++)
-      {
-        placeholder = fibonnaci;
-        fibonnaci += priorValue;
-        priorValue = placeholder;
-      }
-      return fibonnaci;
+
     }
   }
 }

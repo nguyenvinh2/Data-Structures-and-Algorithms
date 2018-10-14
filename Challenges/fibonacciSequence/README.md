@@ -24,4 +24,4 @@ Space efficiency - Big O with be O(N) as a new array will be instantiated to pro
 
 ## Solution
 
-![Console](../../assets/arrayShift.jpg?raw=true "Output")
+![Console](../../assets/fibonnaci.PNG?raw=true "Output")
