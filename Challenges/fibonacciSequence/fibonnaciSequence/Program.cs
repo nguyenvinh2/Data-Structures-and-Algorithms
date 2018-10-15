@@ -4,6 +4,10 @@ namespace fibonnaciSequence
 {
   public class Program
   {
+    /// <summary>
+    /// calls three implementation of fibonacci
+    /// </summary>
+    /// <param name="args"></param>
     public static void Main(string[] args)
     {
       Console.WriteLine("Hello World!");
@@ -14,7 +18,11 @@ namespace fibonnaciSequence
       Console.WriteLine(FibonacciRecursive(input));
       Console.ReadKey();
     }
-
+    /// <summary>
+    /// for loop fibonacci implementation
+    /// </summary>
+    /// <param name="input">sequence input</param>
+    /// <returns></returns>
     public static uint Fibonacci(uint input)
     {
       try
@@ -44,14 +52,23 @@ namespace fibonnaciSequence
         throw;
       }
     }
-
+    /// <summary>
+    /// fibonacci based on formula
+    /// constant operation
+    /// </summary>
+    /// <param name="input"></param>
+    /// <returns></returns>
     public static uint FibonacciConstant(uint input)
     {
       double phi = (Math.Sqrt(5) + 1) / 2;
       uint fibonacci = (uint)((Math.Pow(phi, input) - Math.Pow(-phi, -input)) / Math.Sqrt(5)); ;
       return fibonacci;
     }
-
+    /// <summary>
+    /// recursive implementation
+    /// </summary>
+    /// <param name="input"></param>
+    /// <returns></returns>
     public static uint FibonacciRecursive(uint input)
     {
       if (input == 0)
