@@ -2,7 +2,7 @@
 
 ## Challenge
 
-Create a Custom Link List Class with various methods
+Create a Custom Link List Class to instantiate with various methods. Methods are listed under API
 
 ## API
 
