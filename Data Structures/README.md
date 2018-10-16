@@ -2,9 +2,9 @@
 
 ## Table of Contents
 
-1.[Linked List]()
+1.[Linked List](LinkedList/)
 
-1.
+2.
 
-1.
+3.
 
