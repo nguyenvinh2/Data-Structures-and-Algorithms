@@ -30,7 +30,7 @@ namespace LinkedList
     /// <summary>
     /// prints every node out
     /// </summary>
-    public void printAllNodes()
+    public void PrintAllNodes()
     {
       try
       {
@@ -214,7 +214,7 @@ namespace LinkedList
       Node Search = new Node("World");
       List.AddBefore(New, Search);
       List.AddAfter(new Node("Lisa"), Search);
-      List.printAllNodes();
+      List.PrintAllNodes();
 
       Console.WriteLine();
       Console.WriteLine(List.Includes("Crazy"));
