@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LKthFromEnd", "LKthFromEnd\LKthFromEnd.csproj", "{52D0D764-BB80-430E-B570-0C5D3BC4A54A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LKthFromEnd", "LKthFromEnd\LKthFromEnd.csproj", "{52D0D764-BB80-430E-B570-0C5D3BC4A54A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestLKthFromEnd", "XUnitTestLKthFromEnd\XUnitTestLKthFromEnd.csproj", "{501E71C3-BABD-4212-9CA1-CCD7F13F8B5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{52D0D764-BB80-430E-B570-0C5D3BC4A54A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52D0D764-BB80-430E-B570-0C5D3BC4A54A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52D0D764-BB80-430E-B570-0C5D3BC4A54A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{501E71C3-BABD-4212-9CA1-CCD7F13F8B5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{501E71C3-BABD-4212-9CA1-CCD7F13F8B5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{501E71C3-BABD-4212-9CA1-CCD7F13F8B5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{501E71C3-BABD-4212-9CA1-CCD7F13F8B5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
