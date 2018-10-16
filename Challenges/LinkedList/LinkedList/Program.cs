@@ -32,11 +32,18 @@ namespace LinkedList
     /// </summary>
     public void printAllNodes()
     {
-      Current = Head;
-      while (Current != null)
+      try
       {
-        Console.WriteLine(Current.Data);
-        Current = Current.Next;
+        Current = Head;
+        while (Current != null)
+        {
+          Console.WriteLine(Current.Data);
+          Current = Current.Next;
+        }
+      }
+      catch (Exception)
+      {
+        Console.WriteLine("Operation has run into an error.");
       }
     }
     /// <summary>
@@ -45,15 +52,22 @@ namespace LinkedList
     /// <param name="node">node to want to add to head</param>
     public void AddToHead(Node node)
     {
-      Current = Head;
-      node.Next = Head;
-      Head = node;
-      Current = Head;
+      try
+      {
+        Current = Head;
+        node.Next = Head;
+        Head = node;
+        Current = Head;
+      }
+      catch (Exception)
+      {
+        Console.WriteLine("Operation has run into an error.");
+      }
     }
     /// <summary>
     /// Adds node to the end of the link list
     /// </summary>
-    /// <param name="node"></param>
+    /// <param name="node">node you want to add</param>
     public void AddToEnd(Node node)
     {
       try
@@ -80,12 +94,17 @@ namespace LinkedList
         Console.WriteLine("Operation has run into an error.");
       }
     }
-
+    /// <summary>
+    /// add new node before specified existing node
+    /// </summary>
+    /// <param name="newNode">node you want to add</param>
+    /// <param name="existingNode">specified node you want to add new node before</param>
     public void AddBefore(Node newNode, Node existingNode)
     {
       if (newNode.Next != null)
       {
         Console.WriteLine("Please ensure your input Nodes do not already contain references to other nodes.");
+        newNode.Next = null;
       }
       else
       {
@@ -115,7 +134,11 @@ namespace LinkedList
         }
       }
     }
-
+    /// <summary>
+    /// Adds a new node after a specified exsiting node
+    /// </summary>
+    /// <param name="newNode">node you want to insert</param>
+    /// <param name="existingNode">node you want to insert new node after</param>
     public void AddAfter(Node newNode, Node existingNode)
     {
       if (newNode.Next != null)
@@ -166,6 +189,28 @@ namespace LinkedList
         throw;
       }
     }
+
+    public bool Includes(object data)
+    {
+      try
+      {
+        Current = Head;
+        while (Current != null)
+        {
+          if (Current.Data == data)
+          {
+            return true;
+          }
+          Current = Current.Next;
+        }
+        return false;
+      }
+      catch (Exception)
+      {
+        Console.WriteLine("Operation has run into an error.");
+        throw;
+      }
+    }
   }
   class Program
   {
@@ -174,36 +219,33 @@ namespace LinkedList
       Console.WriteLine("Hello World!");
 
       Console.WriteLine("Add First:");
-      LinkedList myList1 = new LinkedList();
+      LinkedList List = new LinkedList();
 
-      myList1.AddToHead(new Node("Hello"));
-      myList1.AddToHead(new Node("Magical"));
-      myList1.AddToHead(new Node("World"));
-      myList1.printAllNodes();
-
-      Console.WriteLine();
-
- 
-      myList1.AddBefore(new Node("Lisa"), new Node("Hello"));
-      myList1.AddAfter(new Node("Lisa"), new Node("Hello"));
-      myList1.printAllNodes();
+      List.AddToHead(new Node("Hello"));
+      List.AddToHead(new Node("Magical"));
+      List.AddToHead(new Node("World"));
+      List.printAllNodes();
 
       Console.WriteLine();
+      Node New = new Node("Lisa");
+      Node Search = new Node("Magical");
+      List.AddBefore(New, Search);
+      List.AddAfter(new Node("Lisa"), Search);
+      List.printAllNodes();
+
+      Console.WriteLine();
+      Console.WriteLine(List.Includes("Maogical"));
+
 
       Console.WriteLine("Add Last:");
-      myList1.AddToEnd(new Node("Don't"));
-      myList1.AddToEnd(new Node("Be"));
-      myList1.AddToEnd(new Node("Last"));
-      myList1.printAllNodes();
+      List.AddToEnd(new Node("Don't"));
+      List.AddToEnd(new Node("Be"));
+      List.AddToEnd(new Node("Last"));
+      List.printAllNodes();
 
       Console.WriteLine();
 
-      Console.WriteLine(myList1.Traverse(2).Data);
-
-
-
-
-
+      Console.WriteLine(List.Traverse(2).Data);
 
       Console.ReadLine();
     }
