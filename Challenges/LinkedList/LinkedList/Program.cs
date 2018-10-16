@@ -77,67 +77,78 @@ namespace LinkedList
       }
       catch (Exception)
       {
-        Console.WriteLine("Please input a Node type");
+        Console.WriteLine("Operation has run into an error.");
       }
     }
 
     public void AddBefore(Node newNode, Node existingNode)
     {
-      try
+      if (newNode.Next != null)
       {
-        Current = Head;
-        if (Current.Data == existingNode.Data)
+        Console.WriteLine("Please ensure your input Nodes do not already contain references to other nodes.");
+      }
+      else
+      {
+        try
         {
-          AddToHead(newNode);
-          return;
-        }
-
-        while (Current.Next != null)
-        {
-          if (Current.Next.Data == existingNode.Data)
+          Current = Head;
+          if (Current.Data == existingNode.Data)
           {
-            newNode.Next = Current.Next;
-            Current.Next = newNode;
+            AddToHead(newNode);
             return;
           }
-          Current = Current.Next;
+
+          while (Current.Next != null)
+          {
+            if (Current.Next.Data == existingNode.Data)
+            {
+              newNode.Next = Current.Next;
+              Current.Next = newNode;
+              return;
+            }
+            Current = Current.Next;
+          }
         }
-      }
-      catch (Exception)
-      {
-        Console.WriteLine("Please input a Node type");
+        catch (Exception)
+        {
+          Console.WriteLine("Please input a Node type");
+        }
       }
     }
 
     public void AddAfter(Node newNode, Node existingNode)
     {
-      try
+      if (newNode.Next != null)
       {
-        Current = Head;
-        if (Current.Data == existingNode.Data)
-        {
-          newNode.Next = Current.Next;
-          Current.Next = newNode;
-          return;
-        }
-
-        while (Current.Next != null)
-        {
-          if (Current.Next.Data == existingNode.Data)
-          {
-            newNode.Next = Current.Next.Next;
-            Current.Next.Next = newNode;
-            return;
-          }
-          Current = Current.Next;
-        }
+        Console.WriteLine("Please ensure your input Nodes do not already contain references to other nodes.");
       }
-      catch (Exception)
+      else
       {
-        Console.WriteLine("Please input a Node type");
+        try
+        {
+          Current = Head;
+          while (Current != null)
+          {
+            if (Current.Data == existingNode.Data)
+            {
+              newNode.Next = Current.Next;
+              Current.Next = newNode;
+              return;
+            }
+            Current = Current.Next;
+          }
+        }
+        catch (Exception)
+        {
+          Console.WriteLine("Operation has run into an error.");
+        }
       }
     }
-
+    /// <summary>
+    /// Get node at specific "index"
+    /// </summary>
+    /// <param name="number">node index</param>
+    /// <returns></returns>
     public Node Traverse(int number)
     {
       try
@@ -149,9 +160,9 @@ namespace LinkedList
         }
         return Current;
       }
-      catch
+      catch (Exception)
       {
-        Console.WriteLine("Please input a Node type");
+        Console.WriteLine("Operation has run into an error.");
         throw;
       }
     }
@@ -172,11 +183,9 @@ namespace LinkedList
 
       Console.WriteLine();
 
-      Node Magic = new Node("Hello");
-      Node Add = new Node("Lisa");
-
-      myList1.AddBefore(Add, Magic);
-      myList1.AddAfter(Add, Magic);
+ 
+      myList1.AddBefore(new Node("Lisa"), new Node("Hello"));
+      myList1.AddAfter(new Node("Lisa"), new Node("Hello"));
       myList1.printAllNodes();
 
       Console.WriteLine();
