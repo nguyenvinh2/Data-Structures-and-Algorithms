@@ -8,8 +8,8 @@
 
 3. [Challenge: Binary search in a sorted 1D array](Challenges/arrayBinarySearch)
 
-4.  [Challenge: Fibonacci Series](Challenges/fibonacciSequence)
+4. [Challenge: Fibonacci Series](Challenges/fibonacciSequence)
 
-5.
+5. [Challenge: LL Kth From the End](Challenges/LKthFromEnd)
 
 6. 
