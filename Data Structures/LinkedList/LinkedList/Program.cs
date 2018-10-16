@@ -22,7 +22,7 @@ namespace LinkedList
     }
   }
 
-  public class LinkedList
+  public class LinkList
   {
     public Node Head;
     public Node Current;
@@ -68,7 +68,7 @@ namespace LinkedList
     /// Adds node to the end of the link list
     /// </summary>
     /// <param name="node">node you want to add</param>
-    public void AddToEnd(Node node)
+    public void Append(Node node)
     {
       try
       {
@@ -168,28 +168,11 @@ namespace LinkedList
       }
     }
     /// <summary>
-    /// Get node at specific "index"
+    /// search for specified data in list
+    /// returns true or false
     /// </summary>
-    /// <param name="number">node index</param>
+    /// <param name="data">data searched for</param>
     /// <returns></returns>
-    public Node Traverse(int number)
-    {
-      try
-      {
-        Current = Head;
-        for (int i = 0; i < number; i++)
-        {
-          Current = Current.Next;
-        }
-        return Current;
-      }
-      catch (Exception)
-      {
-        Console.WriteLine("Operation has run into an error.");
-        throw;
-      }
-    }
-
     public bool Includes(object data)
     {
       try
@@ -212,41 +195,35 @@ namespace LinkedList
       }
     }
   }
-  class Program
+  public class Program
   {
     static void Main(string[] args)
     {
       Console.WriteLine("Hello World!");
 
       Console.WriteLine("Add First:");
-      LinkedList List = new LinkedList();
+      LinkList List = new LinkList();
 
       List.AddToHead(new Node("Hello"));
-      List.AddToHead(new Node("Magical"));
+      List.AddToHead(new Node("Crazy"));
       List.AddToHead(new Node("World"));
       List.printAllNodes();
 
       Console.WriteLine();
       Node New = new Node("Lisa");
-      Node Search = new Node("Magical");
+      Node Search = new Node("World");
       List.AddBefore(New, Search);
       List.AddAfter(new Node("Lisa"), Search);
       List.printAllNodes();
 
       Console.WriteLine();
-      Console.WriteLine(List.Includes("Maogical"));
-
+      Console.WriteLine(List.Includes("Crazy"));
 
       Console.WriteLine("Add Last:");
-      List.AddToEnd(new Node("Don't"));
-      List.AddToEnd(new Node("Be"));
-      List.AddToEnd(new Node("Last"));
+      List.Append(new Node("Don't"));
+      List.Append(new Node("Be"));
+      List.Append(new Node("Last"));
       List.printAllNodes();
-
-      Console.WriteLine();
-
-      Console.WriteLine(List.Traverse(2).Data);
-
       Console.ReadLine();
     }
   }
