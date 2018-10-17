@@ -16,6 +16,8 @@ The Link List Challenge is based on an existing class on C# consisting of a Node
 contain the properties of the Data and Pointer to the next node.
 The Link List Class should be aware of the Head Node and the Current Node.
 
+[Linked List](../../Data%20Structures/LinkedList/)
+
 ## Solution
 
 Code Implementation is located in Program.cs
