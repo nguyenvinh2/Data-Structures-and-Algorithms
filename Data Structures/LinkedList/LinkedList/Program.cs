@@ -207,7 +207,7 @@ namespace LinkedList
       List.AddToHead(new Node("Hello"));
       List.AddToHead(new Node("Crazy"));
       List.AddToHead(new Node("World"));
-      List.printAllNodes();
+      List.PrintAllNodes();
 
       Console.WriteLine();
       Node New = new Node("Lisa");
@@ -223,7 +223,7 @@ namespace LinkedList
       List.Append(new Node("Don't"));
       List.Append(new Node("Be"));
       List.Append(new Node("Last"));
-      List.printAllNodes();
+      List.PrintAllNodes();
       Console.ReadLine();
     }
   }

@@ -23,7 +23,7 @@ namespace LKthFromEnd
       InputList.Append(new Node("Charlie"));
       InputList.Append(new Node("Dan"));
       InputList.Append(new Node("Stan"));
-      InputList.printAllNodes();
+      InputList.PrintAllNodes();
 
       KthSearch(input, InputList);
       Console.ReadKey();
