@@ -22,4 +22,4 @@ The Link List Class should be aware of the Head Node and the Current Node.
 
 Code Implementation is located in Program.cs
 
-![Console](../../assets/ll_kth_from_end.jpg?raw=true "Output")
+![Console](../../assets/llMerge.jpg?raw=true "Output")
