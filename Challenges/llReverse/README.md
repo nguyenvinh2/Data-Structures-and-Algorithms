@@ -27,14 +27,21 @@ A Null input will simply return null.
 Create 2 Temp Nodes
 
 Set TempNodePrevious = null
+
 Set TempNodeNext;
+
 Set Current Node = Head
+
 Create While loop. Run while Current != Null
 
 Within While loop:
+
   Set TempNodeNext = Current.Next
+  
   Set Current.Next = Previous
+  
   Set Previous = Current
+  
   Set Current = TempNodeNext
 
 This sequence will repeat until end of Link List
