@@ -13,3 +13,5 @@
 5. [Challenge: LL Kth From the End](Challenges/LKthFromEnd)
 
 6. [Challenge: Merge Linked Lists](Challenges/llMerge)
+
+7. [Challenge: Reverse Linked Lists](Challenges/llReverse)
