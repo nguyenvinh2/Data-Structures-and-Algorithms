@@ -3,7 +3,7 @@ using LinkedList;
 
 namespace llReverse
 {
-  class Program
+  public class Program
   {
     /// <summary>
     /// creates inputs to test method
@@ -31,7 +31,7 @@ namespace llReverse
     /// </summary>
     /// <param name="Input">input link list</param>
     /// <returns>link list with order reversed</returns>
-    static LinkList LLReverse(LinkList Input)
+    public static LinkList LLReverse(LinkList Input)
     {
       Node Previous = null;
       Node NextTemp;
