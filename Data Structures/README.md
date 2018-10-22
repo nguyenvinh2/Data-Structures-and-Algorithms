@@ -4,7 +4,7 @@
 
 1.[Linked List](LinkedList/)
 
-2.
+2.[Stack and Queue](StackAndQueue/)
 
 3.
 
