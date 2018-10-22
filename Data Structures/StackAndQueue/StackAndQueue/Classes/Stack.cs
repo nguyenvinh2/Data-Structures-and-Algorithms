@@ -46,8 +46,16 @@ namespace StackAndQueue.Classes
     /// <param name="node">the node being added</param>
     public void Push(Node node)
     {
-      node.Next = Top;
-      Top = node;
+      //this prevents user from messing up the data structure by trying to add a null node
+      if (node == null)
+      {
+        Console.WriteLine("You cannot add a null value to the Stack");
+      }
+      else
+      {
+        node.Next = Top;
+        Top = node;
+      }
     }
   }
 }

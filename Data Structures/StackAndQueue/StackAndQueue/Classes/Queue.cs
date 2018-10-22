@@ -34,8 +34,16 @@ namespace StackAndQueue.Classes
     /// <param name="node">the node you want to add to the queue</param>
     public void Enqueue(Node node)
     {
-      Rear.Next = node;
-      Rear = node;
+      //this prevents user from messing up the data structure by trying to add a null node
+      if (node == null)
+      {
+        Console.WriteLine("You cannot add a null value to the Queue");
+      }
+      else
+      {
+        Rear.Next = node;
+        Rear = node;
+      }
     }
     /// <summary>
     /// removes the node at the front of the queue, satisfying the FIFO principle
