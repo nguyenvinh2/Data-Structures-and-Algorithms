@@ -2,16 +2,30 @@
 
 ## Challenge
 
-Create a Custom Link List Class to instantiate with various methods. Methods are listed under API
+Create a Custom Stack and Queue Structure for Node Data.
+
+The Stack Data Structure should implement a Last In First Out system. The last node added shall remain at the top of the stack for data access.
+
+The Queue Data Structure should implement a First In First Out system. The last node added shall remain at the rear of the queue for data access.
+
+## Instructions
+
+Download the Stack and Queue Solution and reference it as a dll to incorporate it into your project. 
+
+Add
+
+using StackAndQueue.Classes;
+
+at the top of your C# code in order to call it up.
 
 ## API
 
-PrintAllNodes() - Prints the data of all of the Nodes within a created LinkList object
+Peek() - Return the node at the TOP of the Stack or the FRONT of the Queue
 
-AddToHead(Node node) - Adds an input node to the front of the Link List (the head)
+Push(Node node) - Adds an input node to the TOP of the Stack.
 
-Append( Node node) - Adds an input node to the end of the Link List
+Pop() - Removes the node at the TOP of the Stack
 
-AddBefore(Node newNode, Node existingNode) - Takes two inputs. Method will locate the existingNode and add newNode prior to the exisitingNode. 
+Enqueue(Node node) - Adds an input node to the REAR of the queue.
 
-AddAfter(Node newNode, Node existingNode) - Takes two inputs. Method will locate the existingNode and add newNode after to the exisitingNode.
+Dequeue() - Removes the node at the FRONT of the queue.
