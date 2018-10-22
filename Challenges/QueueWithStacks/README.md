@@ -2,49 +2,29 @@
 
 ## Challenge
 
-Given a Linked Lists, reverse the order of the LL, where the head Node becomes and the End Node and the End Node becomes the Head Node.
+Create a Queue Class using the functionality of Two Stack Classes. The stack classes will have the associated method of push and pop.
 
-If the input LinkList is [1] -> [2] -> [3] -> [4] -> [5] 
+If the Queue is -> [1] [2] [3] [4] [5] -> , enqueueing [0] will produce:
 
-then the result should be:
+ -> [0] [1] [2] [3] [4] [5] -> 
 
-[5] -> [4] -> [3] -> [2] -> [1]
+Dequeuing should produce:
+
+ -> [0] [1] [2] [3] [4] -> 
 
 ## Approach and Reasoning
 
 Assumptions:
 
-The Link List Challenge is based on an existing class on C# consisting of a Node Class
-contain the properties of the Data and Pointer to the next node.
-The Link List Class should be aware of the Head Node and the Current Node.
+The stack data structure included is found in 
 
-[Linked List](../../Data%20Structures/LinkedList/)
+[Stack And Queue](../../Data%20Structures/StackAndQueue/)
 
-A Null input will simply return null.
+The pre-built Queue Data structure will be ignored.
+
+Null inputs will not affect the structure of the Queue.
 
 ## Solution
-
-Create 2 Temp Nodes
-
-Set TempNodePrevious = null
-
-Set TempNodeNext;
-
-Set Current Node = Head
-
-Create While loop. Run while Current != Null
-
-Within While loop:
-
-  Set TempNodeNext = Current.Next
-  
-  Set Current.Next = Previous
-  
-  Set Previous = Current
-  
-  Set Current = TempNodeNext
-
-This sequence will repeat until end of Link List
 
 Output:
 
