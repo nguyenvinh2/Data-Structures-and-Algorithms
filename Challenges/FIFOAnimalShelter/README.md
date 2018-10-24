@@ -1,49 +1,30 @@
 # FIFO Animal Shelter
+
 ## Challenge
 
-Given a Linked Lists, reverse the order of the LL, where the head Node becomes and the End Node and the End Node becomes the Head Node.
+Create an "Animal Shelter" Class that accepts "Dogs" and "Cats" and utilizises the First In First Out data structure. When a dog is requested to be "released" the Shelter should return the first Dog added to the shelter. The remaining animals should still be in the order it was added in. When an animal other than a dog or cat is requested to be removed, it should return the first animal in the shelter.
 
-If the input LinkList is [1] -> [2] -> [3] -> [4] -> [5] 
+If the Shelter has ->[Dog: Spotty|Cat: Mittens|Dog: Spike|Cat: Mew|Cat:Bulby]-> and a Dog is requested, 
 
 then the result should be:
 
-[5] -> [4] -> [3] -> [2] -> [1]
+->[Dog: Spotty|Cat: Mitten|Cat: Mew|Cat:Bulby]-> with Spike being returned.
 
 ## Approach and Reasoning
 
-Assumptions:
+This challenge will make use of the Queue Data Structure.
 
-The Link List Challenge is based on an existing class on C# consisting of a Node Class
-contain the properties of the Data and Pointer to the next node.
-The Link List Class should be aware of the Head Node and the Current Node.
+[Stacks and Queue](../../Data%20Structures/StacksAndQueue/)
 
-[Linked List](../../Data%20Structures/StacksAndQueue/)
+The solution will have O(N) time efficiency and O(1) space efficiency.
 
-A Null input will simply return null.
+The code implementation will differ from the whiteboard algorithm in that one Queue will be the designated "Shelter", always holding the animals sent to the shelter. The second Queue will be used for temporary operations during the Dequeing process. The Second Queue is not necessarily required to complete the challenge but will be implemented here.
+
+A Marker will be added to the Queue, differing from the Whiteboard solution.
+
+A Null input will have no effect.
 
 ## Solution
-
-Create 2 Temp Nodes
-
-Set TempNodePrevious = null
-
-Set TempNodeNext;
-
-Set Current Node = Head
-
-Create While loop. Run while Current != Null
-
-Within While loop:
-
-  Set TempNodeNext = Current.Next
-  
-  Set Current.Next = Previous
-  
-  Set Previous = Current
-  
-  Set Current = TempNodeNext
-
-This sequence will repeat until end of Link List
 
 Output:
 
