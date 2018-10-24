@@ -5,7 +5,7 @@ using StackAndQueue.Classes;
 
 namespace FIFOAnimalShelter.Classes
 {
-  class AnimalShelter
+  public class AnimalShelter
   {
     /// <summary>
     /// Adding a marker "End" to the Queue. Queue class was not built to handle having null
@@ -16,16 +16,16 @@ namespace FIFOAnimalShelter.Classes
     /// <summary>
     /// gives the animal at the front of the shelter or no animal left if no animal
     /// </summary>
-    /// <returns></returns>
+    /// <returns>the front node being looked at</returns>
     public Node Peek()
     {
       if ((string)Convert.ToString(ShelterOne.Front.Data) != "End")
       {
-        return ShelterOne.Front;
+        return ShelterOne.Peek();
       }
       else
       {
-        return new Node(new Animal("No Animal Left", "No Animal Left"));
+        return new Node(new Animal("No Animal", "No Animal"));
       }
     }
     /// <summary>
@@ -35,10 +35,17 @@ namespace FIFOAnimalShelter.Classes
     /// <param name="node">animal added in</param>
     public void Enqueue(Node node)
     {
-      ShelterOne.Enqueue(node);
-      if ((string)Convert.ToString(ShelterOne.Front.Data) == "End")
+      if (node.Data != null)
       {
-        ShelterOne.Dequeue();
+        ShelterOne.Enqueue(node);
+        if ((string)Convert.ToString(ShelterOne.Front.Data) == "End")
+        {
+          ShelterOne.Dequeue();
+        }
+      }
+      else
+      {
+        Console.WriteLine("No null inputs");
       }
     }
     /// <summary>
@@ -55,6 +62,10 @@ namespace FIFOAnimalShelter.Classes
         //if animal is not a dog or cat, remove one at the front of the queue
         if (animal.ToLower() != "dog" && animal.ToLower() != "cat")
         {
+          if ((string)Convert.ToString(ShelterOne.Front.Data) == "End")
+          {
+            return new Node(new Animal("No Animal", "No Animal"));
+          }
           return ShelterOne.Dequeue();
         }
         //adds marker for while loop
@@ -80,12 +91,19 @@ namespace FIFOAnimalShelter.Classes
           }
           ShelterTwo.Enqueue(new Node("End"));
           ShelterTwo.Dequeue();
-          while ((string)Convert.ToString(ShelterTwo.Front.Data) != "End")
+          if ((string)Convert.ToString(ShelterTwo.Front.Data) == "End")
           {
-            ShelterOne.Enqueue(ShelterTwo.Dequeue());
+            return PetRelease;
           }
-          ShelterOne.Dequeue();
-          return PetRelease;
+          else
+          {
+            while ((string)Convert.ToString(ShelterTwo.Front.Data) != "End")
+            {
+              ShelterOne.Enqueue(ShelterTwo.Dequeue());
+            }
+            ShelterOne.Dequeue();
+            return PetRelease;
+          }
         }
         //this takes care of the condition that if the desired animal is a dog and there are only cats
         //left, don't release any animal
@@ -99,16 +117,16 @@ namespace FIFOAnimalShelter.Classes
           }
           ShelterOne.Enqueue(new Node("End"));
           ShelterOne.Dequeue();
-          return new Node(new Animal("No Animal Released", "No Animal Released"));
+          return new Node(new Animal("No Animal", "No Animal"));
         }
         else
         {
-          return new Node(new Animal("No Animal Left", "No Animal Left"));
+          return new Node(new Animal("No Animal", "No Animal"));
         }
       }
       else
       {
-        return new Node(new Animal("No Animal Left", "No Animal Left"));
+        return new Node(new Animal("No Animal", "No Animal"));
       }
     }
   }
