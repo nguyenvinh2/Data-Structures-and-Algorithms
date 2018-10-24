@@ -3,7 +3,7 @@ using StackAndQueue.Classes;
 
 namespace MultiBracketValidation
 {
-  class Program
+  public class Program
   {
     static void Main(string[] args)
     {
@@ -25,7 +25,7 @@ namespace MultiBracketValidation
       Console.ReadKey();
     }
 
-    static bool MultiBracketValidation(string input)
+    public static bool MultiBracketValidation(string input)
     {
       char[] brackets = input.ToCharArray();
       Stack Keeper = new Stack(new Node(null));
@@ -48,9 +48,17 @@ namespace MultiBracketValidation
         }
         else if (brackets[i] == ']' || brackets[i] == '}' | brackets[i] == ')')
         {
-          if ((char)Keeper.Peek().Data == brackets[i])
+          if (Keeper.Peek().Data != null)
           {
-            Keeper.Pop();
+            if ((char)Keeper.Peek().Data == brackets[i])
+            {
+              Keeper.Pop();
+            }
+            else
+            {
+              return false;
+
+            }
           }
           else
           {
