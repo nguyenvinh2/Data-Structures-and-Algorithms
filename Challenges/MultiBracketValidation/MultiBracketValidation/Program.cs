@@ -24,7 +24,13 @@ namespace MultiBracketValidation
 
       Console.ReadKey();
     }
-
+    /// <summary>
+    /// iterates through character array created from string, puts
+    /// opening brackets in stacks and pops them when the closing bracket is encountered
+    /// by the end of the array, the stack should be empty if all brackets are balanced.
+    /// </summary>
+    /// <param name="input"></param>
+    /// <returns>boolean true or false wether or not bracket is balanced</returns>
     public static bool MultiBracketValidation(string input)
     {
       char[] brackets = input.ToCharArray();
