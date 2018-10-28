@@ -1,4 +1,4 @@
-# Link List Reverse
+# Eeney Meeney Miney Moe
 
 ## Challenge
 
@@ -12,10 +12,15 @@ Write a method that takes in a input number N and a list of names (in string). E
 ### Example
 
 n=3
+
 [A, B, C, D, E]    // 1A, 2B, 3C
+
 [A, B, _, D, E]    // C was removed
+
 [_, B, _, D, E]    // A was removed
+
 [_, B, _, D, _]    // E was removed
+
 [_, _, _, D, _]    // B was removed
                    // only D is left
 
