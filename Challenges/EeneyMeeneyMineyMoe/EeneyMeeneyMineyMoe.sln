@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EeneyMeeneyMineyMoe", "EeneyMeeneyMineyMoe\EeneyMeeneyMineyMoe.csproj", "{C70836CE-0D7E-446B-8DF3-A3EF338AFF99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestEeneyMeeneyMineyMode", "XUnitTestEeneyMeeneyMineyMode\XUnitTestEeneyMeeneyMineyMode.csproj", "{DFDC3B26-94C2-46F6-9724-D75A77147A83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C70836CE-0D7E-446B-8DF3-A3EF338AFF99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C70836CE-0D7E-446B-8DF3-A3EF338AFF99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C70836CE-0D7E-446B-8DF3-A3EF338AFF99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C70836CE-0D7E-446B-8DF3-A3EF338AFF99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFDC3B26-94C2-46F6-9724-D75A77147A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFDC3B26-94C2-46F6-9724-D75A77147A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFDC3B26-94C2-46F6-9724-D75A77147A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFDC3B26-94C2-46F6-9724-D75A77147A83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69A15DED-F6E0-47D8-A278-7F3F230C0639}
+	EndGlobalSection
+EndGlobal
