@@ -22,4 +22,4 @@
 
 10. [Challenge: Multi Bracket Validation](Challenges/MultiBracketValidation)
 
-10. [Challenge: Multi Bracket Validation](Challenges/EeneyMeeneyMineyMoe)
+11. [Challenge: Eeeney Meeney Miney Moe](Challenges/EeneyMeeneyMineyMoe)
