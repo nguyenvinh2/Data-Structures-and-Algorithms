@@ -17,28 +17,54 @@ namespace Tree
       Console.WriteLine($"Test one two three {test.Root.Left.Data}");
 
       Node find = test.Search(4);
-      Console.WriteLine($"hey {find.Left.Data}");
+      Console.WriteLine($"hey {find.Left.Data} and {test.Root.Data}");
 
       Node Root = new Node(2);
       Root.Left = new Node(3);
       Root.Right = new Node(4);
-
       Root.Left.Left = new Node(5);
       Root.Left.Right = new Node(6);
       Root.Right.Left = new Node(7);
       Root.Right.Right = new Node(8);
 
-      BinaryTree yay = new BinaryTree();
-
-      yay.PostOrder(Root);
+      List<int> post = BinaryTree.PostOrder(Root);
 
       Console.WriteLine();
 
-      yay.InOrder(Root);
+      foreach (var item in post)
+      {
+        Console.Write($"{item} ");
+      }
+
+      List<int> inb = BinaryTree.InOrder(Root);
+
+      foreach (var item in inb)
+      {
+        Console.Write($"{item} ");
+      }
+
 
       Console.WriteLine();
 
-      yay.PreOrder(Root);
+      List<int> pre = BinaryTree.PreOrder(Root);
+
+
+      foreach (var item in pre)
+      {
+        Console.Write($"{item} ");
+      }
+
+
+      Console.WriteLine();
+
+
+      Node okay = null;
+      List<int> po = BinaryTree.PreOrder(okay);
+
+      foreach (var item in po)
+      {
+        Console.WriteLine(item);
+      }
 
       Console.ReadKey();
 

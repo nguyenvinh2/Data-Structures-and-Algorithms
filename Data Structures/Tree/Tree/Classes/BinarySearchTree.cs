@@ -49,14 +49,20 @@ namespace Tree.Classes
         }
       }
     }
+
+    public Node Search(int search)
+    {
+      Node TempNode = Root;
+      return Search(search, TempNode);
+
+    }
     /// <summary>
     /// conducts binary search on the data structure, returns the result.
     /// </summary>
     /// <param name="search">value being searched</param>
     /// <returns>node with the value</returns>
-    public Node Search(int search)
+    Node Search(int search, Node Root)
     {
-
       if (Root == null || Root.Data == search)
       {
         return Root;
@@ -65,12 +71,12 @@ namespace Tree.Classes
       if (Root.Data < search)
       {
         Root = Root.Right;
-        return Search(search);
+        return Search(search, Root);
       }
       else
       {
         Root = Root.Left;
-        return Search(search);
+        return Search(search, Root);
       }
     }
   }

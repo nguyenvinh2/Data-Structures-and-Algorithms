@@ -4,46 +4,82 @@ using System.Text;
 
 namespace Tree.Classes
 {
-  class BinaryTree
+  public class BinaryTree
   {
+    /// <summary>
+    /// public interface for traversal functions
+    /// </summary>
+    /// <param name="Root">root node to traverse</param>
+    /// <returns></returns>
+    public static List<int> InOrder(Node Root)
+    {
+      List<int> Stored = new List<int>();
+      return InOrder(Root, Stored);
+    }
+
+    /// <summary>
+    /// public interface for traversal functions
+    /// </summary>
+    /// <param name="Root">root node to traverse</param>
+    /// <returns></returns>
+    public static List<int> PostOrder(Node Root)
+    {
+      List<int> Stored = new List<int>();
+      return PostOrder(Root, Stored);
+    }
+
+    /// <summary>
+    /// public interface for traversal functions
+    /// </summary>
+    /// <param name="Root">root node to traverse</param>
+    /// <returns></returns>
+    public static List<int> PreOrder(Node Root)
+    {
+      List<int> Stored = new List<int>();
+      return PreOrder(Root, Stored);
+    }
+
     /// <summary>
     /// prints out values in pre order method
     /// </summary>
     /// <param name="Root">root node</param>
-    public void PreOrder(Node Root)
+    static List<int> PreOrder(Node Root, List<int> Stored)
     {
       if (Root != null)
       {
-        Console.Write(Root.Data + " ");
-        PreOrder(Root.Left);
-        PreOrder(Root.Right);
+        Stored.Add(Root.Data);
+        PreOrder(Root.Left, Stored);
+        PreOrder(Root.Right, Stored);
       }
+      return Stored;
     }
     /// <summary>
     /// prints out values in a in order method
     /// </summary>
     /// <param name="Root">root node</param>
-    public void InOrder(Node Root)
+    static List<int> InOrder(Node Root, List<int> Stored)
     {
       if (Root != null)
       {
-        InOrder(Root.Left);
-        Console.Write(Root.Data + " ");
-        InOrder(Root.Right);
+        InOrder(Root.Left, Stored);
+        Stored.Add(Root.Data);
+        InOrder(Root.Right, Stored);
       }
+      return Stored;
     }
     /// <summary>
     /// prints out values in a post order method
     /// </summary>
     /// <param name="Root">root node of tree</param>
-    public void PostOrder(Node Root)
+    static List<int> PostOrder(Node Root, List<int> Stored)
     {
       if (Root != null)
       {
-        PostOrder(Root.Left);
-        PostOrder(Root.Right);
-        Console.Write(Root.Data + " ");
+        PostOrder(Root.Left, Stored);
+        PostOrder(Root.Right, Stored);
+        Stored.Add(Root.Data);
       }
+      return Stored;
     }
   }
 }
