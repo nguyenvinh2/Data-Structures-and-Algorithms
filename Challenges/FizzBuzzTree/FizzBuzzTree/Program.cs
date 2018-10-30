@@ -4,7 +4,7 @@ using Tree.Classes;
 
 namespace FizzBuzzTree
 {
-  class Program
+  public class Program
   {
     static void Main(string[] args)
     {
@@ -80,7 +80,11 @@ namespace FizzBuzzTree
       }
       return OutputValue;
     }
-
+    /// <summary>
+    /// does the "FizzBuzz" comparison
+    /// </summary>
+    /// <param name="value">value of the node</param>
+    /// <returns></returns>
     public static string FizzBuzz(int value)
     {
       if (value % 3 == 0 && value % 5 != 0)
