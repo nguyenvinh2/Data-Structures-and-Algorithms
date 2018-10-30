@@ -23,3 +23,6 @@
 10. [Challenge: Multi Bracket Validation](Challenges/MultiBracketValidation)
 
 11. [Challenge: Eeeney Meeney Miney Moe](Challenges/EeneyMeeneyMineyMoe)
+
+12. [Challenge: Fizz Buzz Tree](Challenges/FizzBuzzTree)
+
