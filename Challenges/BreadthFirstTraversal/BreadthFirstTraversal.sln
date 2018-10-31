@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BreadthFirstTraversal", "BreadthFirstTraversal\BreadthFirstTraversal.csproj", "{8DE4A305-C81F-4961-AE03-8C7C574A9382}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DE4A305-C81F-4961-AE03-8C7C574A9382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DE4A305-C81F-4961-AE03-8C7C574A9382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DE4A305-C81F-4961-AE03-8C7C574A9382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DE4A305-C81F-4961-AE03-8C7C574A9382}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {709C6EBB-38A9-4F72-82FB-EF3DCAC2D666}
+	EndGlobalSection
+EndGlobal
