@@ -3,7 +3,7 @@ using Tree.Classes;
 
 namespace FindMaximumValue
 {
-  class Program
+  public class Program
   {
     static void Main(string[] args)
     {
@@ -21,14 +21,31 @@ namespace FindMaximumValue
 
       Console.ReadKey();
     }
-
+    /// <summary>
+    /// sets up the return output to pass to the pre order traversal method
+    /// </summary>
+    /// <param name="Root">root of tree</param>
+    /// <returns>the max value in tree</returns>
     public static int FindMaxValue(Node Root)
     {
-      int maxOutput = Root.Data;
-      maxOutput = FindMaxValue(Root, maxOutput);
-      return maxOutput;
-    }
+      if (Root != null)
+      {
+        int maxOutput = Root.Data;
 
+        maxOutput = FindMaxValue(Root, maxOutput);
+        return maxOutput;
+      }
+      else
+      {
+        return 0;
+      }
+    }
+    /// <summary>
+    /// pre order traveling to evaluate each node
+    /// </summary>
+    /// <param name="Root">base node</param>
+    /// <param name="maxOutput">the max value in tree so far</param>
+    /// <returns></returns>
     public static int FindMaxValue(Node Root, int maxOutput)
     {
       if (Root != null)
