@@ -5,7 +5,7 @@ using StackAndQueue.Classes;
 
 namespace BreadthFirstTraversal
 {
-  class Program
+  public class Program
   {
     static void Main(string[] args)
     {
@@ -29,13 +29,22 @@ namespace BreadthFirstTraversal
 
       Console.ReadKey();
     }
-
+    /// <summary>
+    /// method made to create a list to store values in for testing
+    /// </summary>
+    /// <param name="Root">root of tree</param>
+    /// <returns>list of breadth first traversal</returns>
     public static List<int> BreadthFirst(Tree.Classes.Node Root)
     {
       List<int> Output = new List<int>();
       return BreadthFirst(Root, Output);
     }
-
+    /// <summary>
+    /// implements the first breadth traversal method using a custom defined queue
+    /// </summary>
+    /// <param name="Root">root of tree</param>
+    /// <param name="Output">lists</param>
+    /// <returns>list of breadth first values</returns>
     public static List<int> BreadthFirst(Tree.Classes.Node Root, List<int> Output)
     {
       Queue BreadthPrint = new Queue(new StackAndQueue.Classes.Node(Root));
