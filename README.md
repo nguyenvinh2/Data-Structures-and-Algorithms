@@ -28,3 +28,5 @@
 
 13. [Challenge: Breadth First Traversal](Challenges/BreadthFirstTraversal)
 
+14. [Challenge: Find Maximum Value in a Binary Tree](Challenges/FindMaximumValue)
+
