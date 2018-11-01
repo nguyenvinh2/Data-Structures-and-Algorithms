@@ -1,4 +1,4 @@
-# Breadth First Traversal
+# Find Maximum Value in a Tree
 
 ## Challenge
 
