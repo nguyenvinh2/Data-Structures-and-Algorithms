@@ -8,8 +8,11 @@ namespace StackAndQueue
     static void Main(string[] args)
     {
       Console.WriteLine("Hello World!");
-      Stack stacky = new Stack(new Node("de"));
-      stacky.Push(null);
+      Queue qer = new Queue(new Node("de"));
+      qer.Dequeue();
+      qer.Enqueue(new Node("dg"));
+      Console.WriteLine(qer.Front.Data);
+
       Console.ReadKey();
    
     }

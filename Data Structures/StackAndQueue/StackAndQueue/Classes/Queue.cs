@@ -39,6 +39,11 @@ namespace StackAndQueue.Classes
       {
         Console.WriteLine("You cannot add a null value to the Queue");
       }
+      else if (Front == null)
+      {
+        Front = node;
+        Rear = node;
+      }
       else
       {
         Rear.Next = node;
@@ -51,14 +56,17 @@ namespace StackAndQueue.Classes
     /// <returns>the node being removed</returns>
     public Node Dequeue()
     {
-      if (Front == null)
+      if (Front != null)
       {
-        return null;
+        Node Current = Front;
+        Front = Front.Next;
+        Current.Next = null;
+        return Current;
       }
-      Node Current = Front;
-      Front = Front.Next;
-      Current.Next = null;
-      return Current;
+      else
+      {
+        return Front;
+      }
     }
   }
 }
