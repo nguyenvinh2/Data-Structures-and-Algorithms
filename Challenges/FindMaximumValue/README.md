@@ -23,4 +23,4 @@ This challenge will make use of a customed Tree Class previously defined:
 
 ## Solution
 
-![Console](../../assets/find_max_value.jpg?raw=true "Output")
+![Console](../../assets/find_max_values.jpg?raw=true "Output")
