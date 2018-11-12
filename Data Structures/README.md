@@ -8,3 +8,5 @@
 
 3.[Tree](Tree/)
 
+3.[Hashtables](Hashtables/)
+
