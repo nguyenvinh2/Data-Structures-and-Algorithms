@@ -30,3 +30,8 @@
 
 14. [Challenge: Find Maximum Value in a Binary Tree](Challenges/FindMaximumValue)
 
+15. [Challenge: Tree Intersection](Challenges/TreeIntersectionChallenge)
+
+15. [Challenge: Repeated Word](Challenges/RepeatedWordChallenge)
+
+
