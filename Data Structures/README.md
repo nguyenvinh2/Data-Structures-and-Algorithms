@@ -8,5 +8,7 @@
 
 3.[Tree](Tree/)
 
-3.[Hashtables](Hashtables/)
+4.[Hashtables](Hashtables/)
+
+5.[Insertion Sort](InsertionSortAlgorithm/)
 
