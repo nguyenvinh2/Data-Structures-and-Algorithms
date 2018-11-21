@@ -10,5 +10,4 @@
 
 4.[Hashtables](Hashtables/)
 
-5.[Insertion Sort](InsertionSortAlgorithm/)
 
