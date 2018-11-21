@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-1. [Insertion Sort](Sorting_Algorithms/InsertionSortAlgorithm)
+1. [Insertion Sort](InsertionSortAlgorithm)
 
-2. [Quick Sort](Sorting_Algorithms/QuickSortAlgorithm)
+2. [Quick Sort](QuickSortAlgorithm)
 
