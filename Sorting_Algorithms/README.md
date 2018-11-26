@@ -6,3 +6,5 @@
 
 2. [Quick Sort](QuickSortAlgorithm)
 
+3. [Merge Sort](MergeSortAlgorithm)
+
