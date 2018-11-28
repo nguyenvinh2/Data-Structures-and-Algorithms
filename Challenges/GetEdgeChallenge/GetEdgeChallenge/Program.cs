@@ -61,11 +61,21 @@ namespace GetEdgeChallenge
             Console.WriteLine(output.Item2);
             Console.ReadKey();
         }
-
+        /// <summary>
+        /// checks if direct flight is possible
+        /// </summary>
+        /// <param name="graph">graph of cities</param>
+        /// <param name="cities">city iternary</param>
+        /// <returns>tuple contain bool and string in money format</returns>
         public static Tuple<bool, string> GetEdge(Graph.Classes.Graph graph, Node[] cities)
         {
+            if (cities.Length <= 1 || graph.AdjacencyList.Count == 0)
+            {
+                return new Tuple<bool, string>(false, 0.ToString("C2"));
+            }
+
             int money = 0;
-            bool exists = false;
+            bool exists = true;
             Tuple<bool, string> costs = new Tuple<bool, string> (exists, money.ToString("C2"));
 
             for (int i = 0; i < cities.Length-1; i++)
@@ -73,11 +83,20 @@ namespace GetEdgeChallenge
                 List<Tuple<Node, int>> neighborNodes = graph.GetNeighbors(cities[i]);
                 foreach (var item in neighborNodes)
                 {
+                    exists = false;
                     if (item.Item1 == cities[i+1])
                     {
                         money += item.Item2;
                         exists = true;
                     }
+                    if (exists)
+                    {
+                        break;
+                    }
+                }
+                if (!exists)
+                {
+                    break;
                 }
             }
 
