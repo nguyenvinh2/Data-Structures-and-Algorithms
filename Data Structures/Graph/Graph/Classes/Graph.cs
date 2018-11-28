@@ -99,9 +99,9 @@ namespace Graph.Classes
         /// counts number of nodes in the y direction
         /// </summary>
         /// <returns>count of nodes</returns>
-        public uint Size()
+        public int Size()
         {
-            uint nodeCount = 0;
+            int nodeCount = 0;
 
             foreach (var yList in AdjacencyList)
             {

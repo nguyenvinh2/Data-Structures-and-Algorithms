@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj", "{9230B012-A7D4-44B8-B8A6-D4BB71FCDC3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Graph", "Graph\Graph.csproj", "{9230B012-A7D4-44B8-B8A6-D4BB71FCDC3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestGraph", "XUnitTestGraph\XUnitTestGraph.csproj", "{24A7D1E6-CB92-49B4-B343-6ED9C263BDCE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{9230B012-A7D4-44B8-B8A6-D4BB71FCDC3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9230B012-A7D4-44B8-B8A6-D4BB71FCDC3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9230B012-A7D4-44B8-B8A6-D4BB71FCDC3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24A7D1E6-CB92-49B4-B343-6ED9C263BDCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24A7D1E6-CB92-49B4-B343-6ED9C263BDCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24A7D1E6-CB92-49B4-B343-6ED9C263BDCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24A7D1E6-CB92-49B4-B343-6ED9C263BDCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
