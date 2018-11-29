@@ -19,4 +19,4 @@ For each city in the array, the method traverses through its neighbor collection
 
 ## Solution
 
-![Console](../../assets/fizzbuzztree.jpg?raw=true "Output")
+![Console](../../assets/get_edge.jpg?raw=true "Output")
