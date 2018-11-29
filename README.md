@@ -34,5 +34,7 @@
 
 16. [Challenge: Repeated Word](Challenges/RepeatedWordChallenge)
 
-16. [Challenge: Unique Character in a String](Challenges/UniqueCharacterChallenge)
+17. [Challenge: Unique Character in a String](Challenges/UniqueCharacterChallenge)
+
+18. [Challenge: Get Edge](Challenges/GetEdgeChallenge)
 
