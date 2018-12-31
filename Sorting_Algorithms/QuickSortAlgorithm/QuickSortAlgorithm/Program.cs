@@ -7,7 +7,7 @@ namespace QuickSortAlgorithm
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            int[] myArray = { 90, 20, 30, 90, 40, 40, 70 };
+            int[] myArray = { 5,9,7,2 };
 
             for (int i = 0; i < myArray.Length; i++)
             {
