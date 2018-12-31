@@ -38,3 +38,5 @@
 
 18. [Challenge: Get Edge](Challenges/GetEdgeChallenge)
 
+19. [Challenge: Get Edge](Challenges/Pathweight)
+
