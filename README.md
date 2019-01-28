@@ -42,3 +42,5 @@
 
 20. [Challenge: Check if Tree is BST](Challenges/BST)
 
+21. [Challenge: Remove duplicates in a string](Challenges/RemoveDuplicates)
+
