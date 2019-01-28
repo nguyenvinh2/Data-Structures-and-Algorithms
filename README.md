@@ -40,3 +40,5 @@
 
 19. [Challenge: Find if Pathweight Matches Input](Challenges/Pathweight)
 
+20. [Challenge: Check if Tree is BST](Challenges/BST)
+
