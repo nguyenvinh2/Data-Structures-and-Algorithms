@@ -38,5 +38,5 @@
 
 18. [Challenge: Get Edge](Challenges/GetEdgeChallenge)
 
-19. [Challenge: Get Edge](Challenges/Pathweight)
+19. [Challenge: Find if Pathweight Matches Input](Challenges/Pathweight)
 
