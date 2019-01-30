@@ -45,3 +45,5 @@
 21. [Challenge: Remove duplicates in a string](Challenges/RemoveDuplicates)
 
 22. [Challenge: Rotate a Matrix by 90 degrees](Challenges/RotateMatrix)
+
+23. [Challenge: Print 2-D array in a spiral fashion](Challenges/SpiralArray)
