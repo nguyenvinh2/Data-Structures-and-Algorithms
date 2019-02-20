@@ -18,12 +18,19 @@ namespace SumBST
             Input.Right.Left = new Node(19);
             Input.Right.Right = new Node(25);
 
-            PreorderSearch(Input, Input, -99);
+            string[] result = new string[2] { "No Value Found", "No Value Found" };
+
+            result = PreorderSearch(Input, Input, 30, result);
+
+            for (int i = 0; i < result.Length; i++)
+            {
+                Console.WriteLine(result[i]);
+            }
 
             Console.ReadKey();
             
         }
-        static void PreorderSearch(Node input, Node input2, int sumValue)
+        static string[] PreorderSearch(Node input, Node input2, int sumValue, string[] result)
         {
             int value;
             if (input != null)
@@ -31,12 +38,15 @@ namespace SumBST
                 value = input.Data;
                 if (FindBSTValue(input2, sumValue - value, value, false))
                 {
-                    Console.WriteLine($"{value}, {sumValue - value}");
+                    result[0] = value.ToString();
+                    result[1] = (sumValue - value).ToString();
+                    return result;
                 }
 
-                PreorderSearch(input.Left, input2, sumValue);
-                PreorderSearch(input.Right, input2, sumValue);
+                PreorderSearch(input.Left, input2, sumValue, result);
+                PreorderSearch(input.Right, input2, sumValue, result);
             }
+            return result;
         }
 
         static string[] FindSumPositive(Node input, int sumValue)
