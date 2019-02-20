@@ -18,15 +18,25 @@ namespace SumBST
             Input.Right.Left = new Node(19);
             Input.Right.Right = new Node(25);
 
-            string[] result = FindSumPositive(Input, 21);
-
-            for (int i = 0; i < result.Length; i++)
-            {
-                Console.WriteLine(result[i]);
-            }
+            PreorderSearch(Input, Input, -99);
 
             Console.ReadKey();
             
+        }
+        static void PreorderSearch(Node input, Node input2, int sumValue)
+        {
+            int value;
+            if (input != null)
+            {
+                value = input.Data;
+                if (FindBSTValue(input2, sumValue - value, value, false))
+                {
+                    Console.WriteLine($"{value}, {sumValue - value}");
+                }
+
+                PreorderSearch(input.Left, input2, sumValue);
+                PreorderSearch(input.Right, input2, sumValue);
+            }
         }
 
         static string[] FindSumPositive(Node input, int sumValue)
@@ -34,7 +44,7 @@ namespace SumBST
             string[] result = new string[2];
             for (int i = 0; i < sumValue; i++)
             {
-                if (FindBSTValuePositive(input, i, false) && (FindBSTValuePositive(input, sumValue - i, false)))
+                if (FindBSTValue(input, i, false) && (FindBSTValue(input, sumValue - i, false)))
                 {
                     result[0] = i.ToString();
                     result[1] = (sumValue - i).ToString();
@@ -46,15 +56,33 @@ namespace SumBST
             return result;
         }
 
-        static bool FindBSTValuePositive(Node Root, int value, bool result)
+        static bool FindBSTValue(Node Root, int value, int comp, bool result)
         {
             if (Root.Data > value && Root.Left != null)
             {
-                result = FindBSTValuePositive(Root.Left, value, result);
+                result = FindBSTValue(Root.Left, value, result);
             }
             if (Root.Data < value && Root.Right != null)
             {
-                result = FindBSTValuePositive(Root.Right, value, result);
+                result = FindBSTValue(Root.Right, value, result);
+            }
+            if (Root.Data == value && value != comp)
+            {
+                return true;
+            }
+            return result;
+        }
+
+
+        static bool FindBSTValue(Node Root, int value, bool result)
+        {
+            if (Root.Data > value && Root.Left != null)
+            {
+                result = FindBSTValue(Root.Left, value, result);
+            }
+            if (Root.Data < value && Root.Right != null)
+            {
+                result = FindBSTValue(Root.Right, value, result);
             }
             if (Root.Data == value)
             {
