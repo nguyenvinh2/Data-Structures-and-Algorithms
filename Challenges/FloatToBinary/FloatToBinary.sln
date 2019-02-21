@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FloatToBinary", "FloatToBinary\FloatToBinary.csproj", "{2495664E-5DC9-40D0-8A34-8572D86E0225}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2495664E-5DC9-40D0-8A34-8572D86E0225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2495664E-5DC9-40D0-8A34-8572D86E0225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2495664E-5DC9-40D0-8A34-8572D86E0225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2495664E-5DC9-40D0-8A34-8572D86E0225}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBB95F24-0D73-4073-9A02-1791EA5D07DE}
+	EndGlobalSection
+EndGlobal
