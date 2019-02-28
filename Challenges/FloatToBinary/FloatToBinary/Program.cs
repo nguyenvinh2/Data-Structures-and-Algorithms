@@ -8,5 +8,13 @@ namespace FloatToBinary
         {
             Console.WriteLine("Hello World!");
         }
+
+        static int Convert(decimal input)
+        {
+            int wholeNumber = (int)input;
+            decimal fraction = input - wholeNumber;
+
+
+        }
     }
 }
