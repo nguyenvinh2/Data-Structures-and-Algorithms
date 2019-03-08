@@ -18,7 +18,7 @@ namespace SubMatrixSum
                 {16,17,18,19,20 },
                 {20,21,22,23, 24} };
 
-            int[][] pascal = PascalTriangle(5);
+            int[][] pascal = PascalTriangle(10);
 
             for (int i = 0; i < pascal.GetLength(0); i++)
             {
